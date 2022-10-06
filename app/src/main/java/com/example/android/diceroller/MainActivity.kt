@@ -17,6 +17,8 @@
 package com.example.android.diceroller
 
 import android.os.Bundle
+import android.widget.Button
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
@@ -24,6 +26,11 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        val botontirar : Button = findViewById(R.id.boton_tirar)
+        botontirar.setOnClickListener {
+            Toast.makeText(this, R.string.msg_clickado, Toast.LENGTH_SHORT).show()
+        }
 
         // esta es mi rama donde pongo mi codigo
     }

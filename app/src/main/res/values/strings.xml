@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Dice Roller</string>
     <string name="texto_boton">Tirar</string>
+    <string name="msg_clickado">Botón clickado</string>
 </resources>
