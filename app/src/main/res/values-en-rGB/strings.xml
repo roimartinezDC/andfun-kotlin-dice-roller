@@ -3,5 +3,6 @@
     <string name="app_name">Says Roller</string>
     <string name="texto_boton">Roll</string>
     <string name="msg_clickado">Button clicked</string>
+    <string name="contenido_dado">A dice</string>
 
 </resources>
