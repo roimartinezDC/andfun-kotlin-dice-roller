@@ -18,8 +18,10 @@ package com.example.android.diceroller
 
 import android.os.Bundle
 import android.widget.Button
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -29,9 +31,14 @@ class MainActivity : AppCompatActivity() {
 
         val botontirar : Button = findViewById(R.id.boton_tirar)
         botontirar.setOnClickListener {
-            Toast.makeText(this, R.string.msg_clickado, Toast.LENGTH_SHORT).show()
+            tirarDado()
         }
+    }
 
-        // esta es mi rama donde pongo mi codigo
+    private fun tirarDado() {
+        val numRandom = Random().nextInt(6) + 1
+
+        val textView : TextView = findViewById(R.id.textView)
+        textView.setText(numRandom.toString())
     }
 }
