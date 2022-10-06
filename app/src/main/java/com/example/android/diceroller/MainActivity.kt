@@ -26,6 +26,8 @@ import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
+    lateinit var imagenDado : ImageView
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -34,6 +36,8 @@ class MainActivity : AppCompatActivity() {
         botontirar.setOnClickListener {
             tirarDado()
         }
+
+        imagenDado = findViewById(R.id.imagenDado)
     }
 
     private fun tirarDado() {
@@ -46,7 +50,7 @@ class MainActivity : AppCompatActivity() {
             5 -> R.drawable.dice_5
             else -> R.drawable.dice_6
         }
-        val imagenDado: ImageView = findViewById(R.id.imagenDado)
+
         imagenDado.setImageResource(recursoImagen)
     }
 }
