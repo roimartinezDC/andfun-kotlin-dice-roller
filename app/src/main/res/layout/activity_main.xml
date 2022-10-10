@@ -23,16 +23,19 @@
 
     <Button
         android:id="@+id/boton_tirar"
-        android:layout_width="110dp"
-        android:layout_height="63dp"
+        android:layout_width="130dp"
+        android:layout_height="59dp"
         android:layout_marginStart="150dp"
         android:layout_marginEnd="151dp"
         android:layout_marginBottom="260dp"
         android:text="@string/texto_boton"
+        android:textColor="#000000"
+        app:backgroundTint="#EFDF54"
+        app:icon="@drawable/baseline_fingerprint_24"
+        app:iconTint="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:icon="@drawable/baseline_fingerprint_24"/>
+        app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
         android:id="@+id/imagenDado"

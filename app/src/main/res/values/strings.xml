@@ -1,6 +1,7 @@
 <resources>
-    <string name="app_name">Tirar una Moneda</string>
-    <string name="texto_boton">Tirar</string>
+    <string name="app_name">Lanzar Moneda</string>
+    <string name="app_name2">Moneda</string>
     <string name="msg_clickado">Botón clickado</string>
     <string name="contenido_dado">Un dado</string>
+    <string name="texto_boton">Lanzar</string>
 </resources>

@@ -4,5 +4,6 @@
     <string name="msg_clickado">Button clicked</string>
     <string name="contenido_dado">A dice</string>
     <string name="app_name">Flip a Coin</string>
+    <string name="app_name2">Coin</string>
 
 </resources>
