@@ -16,6 +16,7 @@
 
 package com.example.android.diceroller
 
+import android.graphics.drawable.AnimationDrawable
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
@@ -24,7 +25,8 @@ import java.util.*
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var imagenDado : ImageView
+    private lateinit var imagenMoneda : ImageView
+    private lateinit var coinAnimation: AnimationDrawable
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,18 +34,22 @@ class MainActivity : AppCompatActivity() {
 
         val botontirar : Button = findViewById(R.id.boton_tirar)
         botontirar.setOnClickListener {
-            tirarDado()
+            imagenMoneda = findViewById<ImageView>(R.id.imagenDado).apply {
+                setBackgroundResource(flipCoin())
+                coinAnimation = background as AnimationDrawable
+            }
+            coinAnimation.stop()
+            coinAnimation.start()
         }
-
-        imagenDado = findViewById(R.id.imagenDado)
     }
 
-    private fun tirarDado() {
+    private fun flipCoin(): Int {
         val recursoImagen = when (Random().nextInt(2) + 1) {
-            1 -> R.drawable.ic_coin_thumbs__up
-            else -> R.drawable.ic_coin_thumbs_down
+            1 -> R.drawable.coin_animation_down
+            else -> R.drawable.coin_animation_up
         }
-
-        imagenDado.setImageResource(recursoImagen)
+        return recursoImagen
     }
+
+
 }
