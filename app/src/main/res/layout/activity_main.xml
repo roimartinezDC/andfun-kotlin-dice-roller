@@ -19,35 +19,36 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/backgroundColor"
     tools:context=".MainActivity">
 
     <Button
         android:id="@+id/boton_tirar"
-        android:layout_width="130dp"
-        android:layout_height="59dp"
-        android:layout_marginStart="150dp"
-        android:layout_marginEnd="151dp"
-        android:layout_marginBottom="260dp"
+        android:layout_width="126dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="142dp"
+        android:layout_marginTop="90dp"
+        android:layout_marginEnd="143dp"
         android:text="@string/texto_boton"
         android:textColor="#000000"
-        app:backgroundTint="#EFDF54"
+        app:backgroundTint="@color/buttonColor"
         app:icon="@drawable/baseline_fingerprint_24"
         app:iconTint="#000000"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imagenDado" />
 
     <ImageView
         android:id="@+id/imagenDado"
-        android:layout_width="wrap_content"
+        android:layout_width="250dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="105dp"
-        android:layout_marginEnd="106dp"
-        android:layout_marginBottom="58dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="140dp"
+        android:layout_marginEnd="81dp"
         android:contentDescription="@string/contenido_dado"
-        app:layout_constraintBottom_toTopOf="@+id/boton_tirar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/empty_dice" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
