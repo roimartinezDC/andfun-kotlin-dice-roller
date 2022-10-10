@@ -32,6 +32,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        imagenMoneda = findViewById<ImageView>(R.id.imagenDado).apply {
+            setBackgroundResource(R.drawable.ic_goldbitcoin)
+        }
+
         val botontirar : Button = findViewById(R.id.boton_tirar)
         botontirar.setOnClickListener {
             imagenMoneda = findViewById<ImageView>(R.id.imagenDado).apply {
@@ -42,6 +46,13 @@ class MainActivity : AppCompatActivity() {
             coinAnimation.start()
         }
     }
+    override fun onRestart() {
+        super.onRestart()
+        imagenMoneda = findViewById<ImageView>(R.id.imagenDado).apply {
+            setBackgroundResource(R.drawable.ic_goldbitcoin)
+        }
+    }
+
 
     private fun flipCoin(): Int {
         val recursoImagen = when (Random().nextInt(2) + 1) {
