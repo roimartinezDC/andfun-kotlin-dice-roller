@@ -39,13 +39,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun tirarDado() {
-        val recursoImagen = when (Random().nextInt(6) + 1) {
-            1 -> R.drawable.dice_1
-            2 -> R.drawable.dice_2
-            3 -> R.drawable.dice_3
-            4 -> R.drawable.dice_4
-            5 -> R.drawable.dice_5
-            else -> R.drawable.dice_6
+        val recursoImagen = when (Random().nextInt(2) + 1) {
+            1 -> R.drawable.ic_coin_thumbs__up
+            else -> R.drawable.ic_coin_thumbs_down
         }
 
         imagenDado.setImageResource(recursoImagen)
