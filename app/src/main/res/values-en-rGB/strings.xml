@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Says Roller</string>
+    <string name="app_name">Dice Roller</string>
     <string name="texto_boton">Roll</string>
     <string name="msg_clickado">Button clicked</string>
     <string name="contenido_dado">A dice</string>
